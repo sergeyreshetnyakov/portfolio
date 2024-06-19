@@ -1,7 +1,11 @@
 "use client";
 //Redux
 import { useAppSelector, useAppDispatch } from "@/lib/hooks";
-import { changeCurrentUser, addUser, UserType } from "@/lib/messanger/userSlice";
+import {
+  changeCurrentUser,
+  addUser,
+  UserType,
+} from "@/lib/messanger/userSlice";
 
 //Shadcn-ui
 import { Button } from "@/components/ui/button";
@@ -13,7 +17,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  DialogClose
+  DialogClose,
 } from "@/components/ui/dialog";
 
 //React
@@ -74,11 +78,12 @@ export default function Layout({
                   onChange={(text) => setUserName(text.target.value.toString())}
                   required
                 />
-					 <DialogClose asChild>
-						<Button type='submit' onClick={ () => userSubmit() }>Create</Button>
-					 </DialogClose>
+                <DialogClose asChild>
+                  <Button type="submit" onClick={() => userSubmit()}>
+                    Create
+                  </Button>
+                </DialogClose>
               </div>
-
             </DialogContent>
           </Dialog>
         </div>
