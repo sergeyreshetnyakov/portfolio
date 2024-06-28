@@ -2,10 +2,12 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { storeApi } from "./store/storeApi";
 import messageReducer from "./messanger/messageSlice";
 import userReducer from "./messanger/userSlice";
+import cartReducer from "./store/cartSlice";
 
 const rootReducer = combineReducers({
    message: messageReducer,
    user: userReducer,
+	cart: cartReducer,
    [storeApi.reducerPath]: storeApi.reducer,
 });
 

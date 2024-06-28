@@ -9,25 +9,15 @@ interface Props {
 export default function Layout({ children }: Props) {
    return (
       <>
-         <div className="flex justify-between bg-white w-[90%] sm:w-[80%] lg:w-[50%] mx-auto mt-4 p-2 border rounded-xl shadow-xl top-0 left-[5%] sm:left-[10%] lg:left-[25%] fixed">
-            <div>
-               <Button variant="link" className="m-auto pr-[25%]">
-                  <Link href="fakestore">Home</Link>
-               </Button>
-            </div>
-            <div className="flex justify-between sm:w-[40%]">
+         <div className="flex justify-between bg-white w-[90%] sm:w-[80%] lg:w-[50%] mx-auto mt-4 p-3 border rounded-xl shadow-xl top-0 left-[5%] sm:left-[10%] lg:left-[25%] fixed">
+               <div className="my-auto font-semibold ml-3">
+                  FakeStore
+               </div>
                <Button variant="link">
                   <Link href="fakestore/cart" className="my-auto">
                      <FaShoppingCart size="1em" />
                   </Link>
                </Button>
-               <Button variant="outline">
-                  <Link href="fakestore/signin">Sign In</Link>
-               </Button>
-               <Button>
-                  <Link href="fakestore/signup">Sign Up</Link>
-               </Button>
-            </div>
          </div>
 
          {children}
