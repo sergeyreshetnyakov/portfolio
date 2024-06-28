@@ -7,7 +7,7 @@ import cartReducer from "./store/cartSlice";
 const rootReducer = combineReducers({
    message: messageReducer,
    user: userReducer,
-	cart: cartReducer,
+   cart: cartReducer,
    [storeApi.reducerPath]: storeApi.reducer,
 });
 
