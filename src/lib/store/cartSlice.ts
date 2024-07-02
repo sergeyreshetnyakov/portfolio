@@ -15,15 +15,12 @@ export const cartSlice = createSlice({
    reducers: {
       addToCart: (state, action: PayloadAction<IProduct>) => {
          state.cart.push(action.payload);
-         console.log("new product in cart. id: ", action.payload.id);
       },
-      deleteFromCart: (state, action: PayloadAction<number>) => {
-         state.cart.filter((e) => {
-            e.id === action.payload;
-         });
+      deleteCart: (state) => {
+         state.cart = [];
       },
    },
 });
 
 export default cartSlice.reducer;
-export const { addToCart, deleteFromCart } = cartSlice.actions;
+export const { addToCart, deleteCart } = cartSlice.actions;

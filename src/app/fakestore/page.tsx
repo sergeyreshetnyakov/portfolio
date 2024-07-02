@@ -6,7 +6,7 @@ export default function Page() {
    const { data, isLoading } = useGetProductsQuery(30);
 
    return (
-      <div className="grid gap-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-32 mx-16">
+      <div className="grid gap-2 xl:gap-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-32 mx-2 md:mx-4 lg:mx-8 xl:mx-16">
          {isLoading === false ? (
             data.map((e) => (
                <ProductCard
@@ -17,6 +17,8 @@ export default function Page() {
                   category={e.category}
                   image={e.image}
                   rating={e.rating}
+                  key={e.id}
+                  variant="shop"
                />
             ))
          ) : (

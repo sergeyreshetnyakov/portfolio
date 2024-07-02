@@ -15,7 +15,10 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body>
-            <StoreProvider>{children}</StoreProvider>
+            <StoreProvider>
+               {children}
+               <div className="flex mt-24 bg-black h-8"></div>
+            </StoreProvider>
          </body>
       </html>
    );

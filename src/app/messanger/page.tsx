@@ -25,6 +25,7 @@ export default function Page() {
       dispatch(addMessage(message));
       setMessageText("");
    }
+
    return (
       <div className="h-screen w-full p-4 flex-col">
          <ScrollArea>

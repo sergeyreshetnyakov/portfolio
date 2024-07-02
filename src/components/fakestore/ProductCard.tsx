@@ -1,3 +1,4 @@
+"use client";
 import {
    Card,
    CardContent,
@@ -14,9 +15,13 @@ import {
    HoverCardContent,
    HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { addToCart, deleteFromCart } from "@/lib/store/cartSlice";
+import { addToCart } from "@/lib/store/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+
+interface IProps extends IProduct {
+   variant: "cart" | "shop";
+}
 
 export default function ProductCard({
    id,
@@ -26,7 +31,8 @@ export default function ProductCard({
    price,
    image,
    rating,
-}: IProduct) {
+   variant,
+}: IProps) {
    const cart = useAppSelector((state) => state.cart.cart);
    const dispatch = useAppDispatch();
 
@@ -35,29 +41,14 @@ export default function ProductCard({
    useEffect(() => {
       if (cart !== undefined) {
          const product = cart.find((e) => {
-            e.id === id;
+            return e.id === id;
          });
 
-         if (product !== undefined) {
-            setInCart(true);
-         }
+         if (product !== undefined) setInCart(true);
+         else setInCart(false);
       }
-   }, [cart]);
+   }, [cart, id]);
 
-   function addProduct() {
-      dispatch(
-         addToCart({
-            id: id,
-            title: title,
-            price: price,
-            description: description,
-            category: category,
-            image: image,
-            rating: rating,
-         }),
-      );
-      setInCart(true);
-   }
    return (
       <Card className="flex flex-col justify-between">
          <CardHeader>
@@ -66,6 +57,7 @@ export default function ProductCard({
             </CardTitle>
             <h1 className="overflow-hidden">{title}</h1>
          </CardHeader>
+
          <CardContent>
             <CardDescription>
                <HoverCard>
@@ -77,15 +69,27 @@ export default function ProductCard({
                </HoverCard>
             </CardDescription>
          </CardContent>
+
          <CardFooter className="flex justify-between">
-            {inCart === false ? (
-               <Button onClick={() => addProduct()}>Buy</Button>
+            {inCart ? (
+               <div>already in cart</div>
             ) : (
                <Button
-                  variant="outline"
-                  onClick={() => dispatch(deleteFromCart(id))}
+                  onClick={() =>
+                     dispatch(
+                        addToCart({
+                           id: id,
+                           title: title,
+                           category: category,
+                           description: description,
+                           price: price,
+                           image: image,
+                           rating: rating,
+                        }),
+                     )
+                  }
                >
-                  delete from cart
+                  Buy
                </Button>
             )}
             <span className="font-bold">{price}$</span>
