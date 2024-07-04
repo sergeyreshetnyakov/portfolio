@@ -17,7 +17,7 @@ export default function RootLayout({
          <body>
             <StoreProvider>
                {children}
-               <div className="flex mt-24 bg-black h-8"></div>
+               <div className="flex mt-24 bg-black h-8 shadow-xl rounded-t-lg"></div>
             </StoreProvider>
          </body>
       </html>

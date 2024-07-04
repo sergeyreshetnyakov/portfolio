@@ -27,7 +27,7 @@ export default function ProjectCard({
       <Card>
          <CardHeader className="flex flex-row justify-center">
             <Image
-               className="border rounded-xl"
+               className="border rounded-xl shadow-md"
                width={480}
                height={270}
                src={image}
@@ -35,7 +35,7 @@ export default function ProjectCard({
             />
          </CardHeader>
          <CardContent>
-            <CardTitle>{title}</CardTitle>
+            <CardTitle className="pb-4">{title}</CardTitle>
             <CardDescription>{description}</CardDescription>
          </CardContent>
          <CardFooter>

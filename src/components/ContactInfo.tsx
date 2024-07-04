@@ -2,20 +2,18 @@ import Link from "next/link";
 
 interface Props {
    children: React.ReactNode;
-   name: string;
    href: string;
    contact: string;
 }
 
-export default function ContactInfo({ children, name, href, contact }: Props) {
+export default function ContactInfo({ children, href, contact }: Props) {
    return (
       <div className="flex justify-between">
-         <div className="w-16">
+         <div className="w-16 py-2">
             <div className="flex justify-center">{children}</div>
-            <div className="flex justify-center">{name}</div>
          </div>
-         <div className="flex flex-row justify-center w-52">
-            <Link href={href} className="italic">
+         <div className="flex py-2 px-8 flex-row w-52 border-l border-black border-dashed">
+            <Link href={href} className="italic text-clip">
                {contact}
             </Link>
          </div>
