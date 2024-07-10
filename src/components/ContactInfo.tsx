@@ -9,10 +9,10 @@ interface Props {
 export default function ContactInfo({ children, href, contact }: Props) {
    return (
       <div className="flex justify-between">
-         <div className="w-16 py-2">
+         <div className="py-2 pr-5 sm:pr-12 lg:pr-24 border-r border-black border-dashed">
             <div className="flex justify-center">{children}</div>
          </div>
-         <div className="flex py-2 px-8 flex-row w-52 md:text-sm border-l border-black border-dashed">
+         <div className="flex py-2 px-8 flex-row  md:text-sm ">
             <Link href={href} className="italic text-clip">
                {contact}
             </Link>
