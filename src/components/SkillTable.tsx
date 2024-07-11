@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function SkillTable() {
    return (
       <div className="grid grid-cols-2 gap p-4 my-28 border border-dashed border-black rounded-xl">
-
          <div className="flex flex-col border-r border-black pr-3">
             <span className="italic">Фреймворк</span>
             <span className="italic">Стилизация</span>
@@ -24,7 +23,6 @@ export default function SkillTable() {
                <Link href="https://jestjs.io/ru"> Jest</Link>
             </span>
          </div>
-
       </div>
    );
 }

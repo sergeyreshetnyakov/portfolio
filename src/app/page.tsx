@@ -12,11 +12,9 @@ export default function Home() {
    return (
       <>
          {" "}
-         <div className="flex flex-col max-w-[90%] md:max-w-[80%] xl:max-w-[60%] m-auto">
-
+         <div className="flex flex-col mb-24 max-w-[90%] md:max-w-[80%] xl:max-w-[60%] m-auto">
             <ScrollAnimation animateIn="fadeInUp">
                <header className="flex flex-col xl:flex-row justify-between mx-[10%] my-32 md:my-64">
-
                   <div className="flex justify-center mb-12">
                      <div className="flex flex-col xl:mb-12 justify-center">
                         <h1 className="text-2xl">
@@ -49,12 +47,10 @@ export default function Home() {
                         height={384}
                      />
                   </div>
-
                </header>
             </ScrollAnimation>
 
             <main className="mx-6 lg:mx-12">
-
                <ScrollAnimation animateIn="fadeInUp">
                   <SkillTable />
                </ScrollAnimation>
@@ -114,11 +110,9 @@ export default function Home() {
                      />
                   </ScrollAnimation>
                </div>
-
             </main>
 
             <footer className="mx-6 lg:mx-12">
-
                <ScrollAnimation animateIn="fadeInUp">
                   <div className="my-24">
                      <h1 className="font-bold text-2xl">📞Контакты</h1>
@@ -126,7 +120,6 @@ export default function Home() {
                </ScrollAnimation>
 
                <div className="flex flex-col justify-between md:mx-[20%] lg:mx-[30%]">
-
                   <ScrollAnimation animateIn="fadeInUp">
                      <ContactInfo
                         href="mailto:sergeyreshetnyakov@icloud.com"
@@ -150,9 +143,7 @@ export default function Home() {
                         <FaTelegram size="2em"></FaTelegram>
                      </ContactInfo>
                   </ScrollAnimation>
-
                </div>
-
             </footer>
          </div>
       </>
