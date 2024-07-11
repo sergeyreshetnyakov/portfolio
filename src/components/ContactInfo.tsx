@@ -12,7 +12,7 @@ export default function ContactInfo({ children, href, contact }: Props) {
          <div className="py-2 pr-5 sm:pr-12 lg:pr-24 border-r border-black border-dashed">
             <div className="flex justify-center">{children}</div>
          </div>
-         <div className="flex py-2 px-8 flex-row  md:text-sm ">
+         <div className="flex py-2 px-8 flex-row  sm:text-xs md:text-sm ">
             <Link href={href} className="italic text-clip">
                {contact}
             </Link>
