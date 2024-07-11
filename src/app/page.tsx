@@ -12,26 +12,28 @@ export default function Home() {
    return (
       <>
          {" "}
-         <div className="flex flex-col flex flex-col max-w-[90%] md:max-w-[80%] xl:max-w-[60%] m-auto">
+         <div className="flex flex-col max-w-[90%] md:max-w-[80%] xl:max-w-[60%] m-auto">
 
             <ScrollAnimation animateIn="fadeInUp">
-               <header className="flex flex-col xl:flex-row justify-between mx-[15%] my-32 md:my-64">
+               <header className="flex flex-col xl:flex-row justify-between mx-[10%] my-32 md:my-64">
+
                   <div className="flex justify-center mb-12">
-                     <div className="flex flex-col w-80 xl:mb-12 justify-center">
+                     <div className="flex flex-col xl:mb-12 justify-center">
                         <h1 className="text-2xl">
-                           Привет👋, я <b>Frontend-разработчик</b>
+                           Привет👋, я <br /> <b>Frontend-разработчик</b>
                         </h1>
                         <h3>Меня зовут Сергей Решетняков</h3>
                         <h3>
                            Я из{" "}
                            <span className="underline">
-                              Краснодарский Край, Краснодар
+                              Краснодарского Края, города Краснодар
                            </span>
                            📍
                         </h3>
                      </div>
                   </div>
-                  <div className="flex justify-center rounded">
+
+                  <div className="xl:hidden flex justify-center rounded">
                      <Image
                         src="/myPhoto.jpeg"
                         alt="me"
@@ -39,6 +41,15 @@ export default function Home() {
                         height={256}
                      />
                   </div>
+                  <div className="hidden xl:visible xl:flex justify-center rounded">
+                     <Image
+                        src="/myPhoto.jpeg"
+                        alt="me"
+                        width={384}
+                        height={384}
+                     />
+                  </div>
+
                </header>
             </ScrollAnimation>
 
@@ -109,11 +120,13 @@ export default function Home() {
             <footer className="mx-6 lg:mx-12">
 
                <ScrollAnimation animateIn="fadeInUp">
-                  <div className="fade-in my-24">
+                  <div className="my-24">
                      <h1 className="font-bold text-2xl">📞Контакты</h1>
                   </div>
                </ScrollAnimation>
-               <div className=" flex flex-col justify-between md:mx-[20%] lg:mx-[30%]">
+
+               <div className="flex flex-col justify-between md:mx-[20%] lg:mx-[30%]">
+
                   <ScrollAnimation animateIn="fadeInUp">
                      <ContactInfo
                         href="mailto:sergeyreshetnyakov@icloud.com"
@@ -122,6 +135,7 @@ export default function Home() {
                         <ImMail4 size="2em"></ImMail4>
                      </ContactInfo>
                   </ScrollAnimation>
+
                   <ScrollAnimation animateIn="fadeInUp">
                      <ContactInfo
                         href="https://github.com/sergeyreshetnyakov"
@@ -130,11 +144,13 @@ export default function Home() {
                         <FaGithub size="2em"></FaGithub>
                      </ContactInfo>
                   </ScrollAnimation>
+
                   <ScrollAnimation animateIn="fadeInUp">
                      <ContactInfo href="https://t.me/ei_gek" contact="@ei_gek">
                         <FaTelegram size="2em"></FaTelegram>
                      </ContactInfo>
                   </ScrollAnimation>
+
                </div>
 
             </footer>
