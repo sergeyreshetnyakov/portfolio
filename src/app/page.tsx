@@ -145,8 +145,8 @@ export default function Home() {
                   </ScrollAnimation>
                </div>
             </footer>
-            <div className="flex bg-black h-8 shadow-xl rounded-t-lg"></div>
          </div>
+         <div className="flex bg-black h-8 shadow-xl rounded-t-lg"></div>
       </>
    );
 }
