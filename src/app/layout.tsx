@@ -15,10 +15,7 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body>
-            <StoreProvider>
-               {children}
-               <div className="flex bg-black h-8 shadow-xl rounded-t-lg"></div>
-            </StoreProvider>
+            <StoreProvider>{children}</StoreProvider>
          </body>
       </html>
    );

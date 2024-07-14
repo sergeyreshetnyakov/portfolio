@@ -13,6 +13,8 @@ export default function Layout({ children }: Props) {
          </div>
 
          {children}
+
+         <div className="flex bg-black h-8 shadow-xl rounded-t-lg"></div>
       </>
    );
 }

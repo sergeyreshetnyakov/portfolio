@@ -119,7 +119,7 @@ export default function Home() {
                   </div>
                </ScrollAnimation>
 
-               <div className="flex flex-col justify-between md:mx-[20%] lg:mx-[30%]">
+               <div className="flex flex-col justify-between md:mx-[15%] lg:mx-[30%]">
                   <ScrollAnimation animateIn="fadeInUp">
                      <ContactInfo
                         href="mailto:sergeyreshetnyakov@icloud.com"
@@ -145,6 +145,7 @@ export default function Home() {
                   </ScrollAnimation>
                </div>
             </footer>
+            <div className="flex bg-black h-8 shadow-xl rounded-t-lg"></div>
          </div>
       </>
    );
